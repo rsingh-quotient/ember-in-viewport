@@ -1,6 +1,6 @@
 <div class="list-scrollEvent infinity-container">
   <ul>
-    {{#each this.model as |val|}}
+    {{#each model as |val|}}
     <div class="infinity-svg-scrollEvent">
       <svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
         {{{val}}}
@@ -8,12 +8,11 @@
     </div>
     {{/each}}
   </ul>
-  <MyComponent
+  {{my-component
     class="infinity-scrollable-scrollEvent"
-    @viewportSpyOverride={{true}}
-    @viewportIntersectionObserverOverride={{false}}
-    @viewportRAFOverride={{false}}
-    @scrollableAreaOverride=".list-scrollEvent"
-    @infinityLoad={{this.infinityLoad}}
-  />
+    viewportSpyOverride=true
+    viewportIntersectionObserverOverride=false
+    viewportRAFOverride=false
+    scrollableAreaOverride=".list-scrollEvent"
+    infinityLoad=(action "infinityLoad")}}
 </div>

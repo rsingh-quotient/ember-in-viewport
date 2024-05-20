@@ -27,7 +27,6 @@ a.active {
 
 #ember-testing-container {
   margin-bottom: 500px !important;
-  top: 0;
 }
 
 .infinity-container {
@@ -38,19 +37,5 @@ a.active {
 }
 .infinity-component, .infinity-scrollable {
   height: 10px;
-  background-color: red;
 }
 
-.infinity-scrollable {
-  width: 100px;
-  min-height: 1px;
-}
-
-.class-components {
-  display: flex;
-  justify-content: space-between;
-}
-
-#raf-loader {
-  height: 10px;
-}

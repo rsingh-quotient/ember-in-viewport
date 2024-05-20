@@ -1,3 +1,4 @@
-import InfinityScrollable from './infinity-scrollable';
+import ScrollableController from './infinity-scrollable';
 
-export default class InfinityScrollableScrollevent extends InfinityScrollable {}
+export default ScrollableController.extend({
+});

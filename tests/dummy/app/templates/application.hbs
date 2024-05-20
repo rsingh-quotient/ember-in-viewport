@@ -1,15 +1,9 @@
 <h2 id="title">ember-in-viewport</h2>
 
 <ul>
-  <li><LinkTo @route="infinity">Infinity IntersectionObserver</LinkTo></li>
-  <li><LinkTo @route="infinity-modifier">Infinity with a Modifier</LinkTo></li>
-  <li><LinkTo @route="infinity-built-in-modifiers">Infinity with built-in Modifiers</LinkTo></li>
-  <li><LinkTo @route="infinity-class">Infinity with a Class / Class rAF</LinkTo></li>
-  <li><LinkTo @route="infinity-scrollable">Infinity Scrollable IntersectionObserver</LinkTo></li>
-  <li><LinkTo @route="infinity-scrollable-raf">Infinity Scrollable rAF</LinkTo></li>
-  <li><LinkTo @route="infinity-scrollable-scrollevent">Infinity Scrollable Event</LinkTo></li>
-  <li><LinkTo @route="infinity-custom-element">Infinity with a Custom Element</LinkTo></li>
-  <li><LinkTo @route="infinity-right-left">Infinity Right Left</LinkTo></li>
+  <li>{{link-to "Infinity IntersectionObserver" "infinity"}}</li>
+  <li>{{link-to "Infinity Scrollable IntersectionObserver" "infinity-scrollable"}}</li>
+  <li>{{link-to "Infinity Scrollable rAF" "infinity-scrollable-raf"}}</li>
 </ul>
 
 {{outlet}}

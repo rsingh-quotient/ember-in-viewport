@@ -1,18 +1,24 @@
 <div>
-  <MyComponent
-    class="top start-enabled"
-    @viewportSpyOverride={{true}}
-  >
+  {{#my-component
+    viewportSpyOverride=true
+    class="top start-enabled"}}
     <p>Starts enabled</p>
-  </MyComponent>
+  {{/my-component}}
+
+  {{#my-component
+    class="top start-disabled"
+    viewportEnabledOverride=false
+  }}
+    <p>Starts disabled</p>
+  {{/my-component}}
 </div>
 
 <div class="hide-me">
-  <MyComponent
+  {{#my-component
+    viewportSpyOverride=true
+    viewportIntersectionObserverOverride=false
     class="bottom"
-    @viewportSpyOverride={{true}}
-    @viewportIntersectionObserverOverride={{false}}
-  >
+  }}
     <p>Hi!</p>
-  </MyComponent>
+  {{/my-component}}
 </div>

@@ -1,37 +1,39 @@
 <div class="list-rAF infinity-container">
   <ul>
-    {{#each this.model as |val|}}
-      <div class="infinity-svg-rAF">
+    {{#each model as |val|}}
+    <div class="infinity-svg-rAF">
+      <svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        {{{val}}}
+      </svg>
+    </div>
+    {{/each}}
+  </ul>
+  {{my-component
+    class="infinity-scrollable-rAF infinity-scrollable"
+    viewportSpyOverride=true
+    viewportIntersectionObserverOverride=false
+    viewportToleranceOverride=viewportToleranceOverride
+    scrollableAreaOverride=".list-rAF"
+    infinityLoad=(action "infinityLoad")}}
+</div>
+
+<div style="height: 100px"></div>
+
+<div class="list-rAF-bottom infinity-container">
+  <ul>
+    {{#each otherModels as |val|}}
+      <div class="infinity-svg-rAF-bottom">
         <svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
           {{{val}}}
         </svg>
       </div>
     {{/each}}
   </ul>
-  <MyComponent
-    class="infinity-scrollable-rAF infinity-scrollable"
-    @viewportSpyOverride={{true}}
-    @viewportIntersectionObserverOverride={{false}}
-    @viewportToleranceOverride={{this.viewportToleranceOverride}}
-    @scrollableAreaOverride=".list-rAF"
-    @infinityLoad={{this.infinityLoad}}
-  />
+  {{my-component
+    class="infinity-scrollable-rAF-bottom infinity-scrollable"
+    viewportSpyOverride=true
+    viewportIntersectionObserverOverride=false
+    viewportToleranceOverride=viewportToleranceOverride
+    scrollableAreaOverride=".list-rAF-bottom"
+    infinityLoad=(action "infinityLoadOther")}}
 </div>
-
-<div style="height: 100px"></div>
-
-<ul>
-  {{#each this.otherModels as |val|}}
-    <div class="infinity-svg-rAF-bottom">
-      <svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        {{{val}}}
-      </svg>
-    </div>
-  {{/each}}
-</ul>
-<MyComponent
-  class="infinity-scrollable-rAF-bottom infinity-scrollable"
-  @viewportIntersectionObserverOverride={{false}}
-  @viewportToleranceOverride={{this.viewportToleranceOverride}}
-  @infinityLoad={{this.infinityLoadOther}}
-/>

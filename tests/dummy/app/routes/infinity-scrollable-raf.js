@@ -1,3 +1,4 @@
 import ScrollableRoute from './infinity-scrollable';
 
-export default ScrollableRoute.extend({});
+export default ScrollableRoute.extend({
+});
